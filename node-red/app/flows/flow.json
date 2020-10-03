@@ -1,0 +1,905 @@
+[
+    {
+        "id": "c65a1f24.683bf",
+        "type": "tab",
+        "label": "Device & System stats",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "a9957681.4a8048",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b2461ddd.863d6",
+        "type": "ui_group",
+        "z": "",
+        "name": "Timeline",
+        "tab": "bae89319.971aa",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "8407945a.3b9f68",
+        "type": "ui_group",
+        "z": "",
+        "name": "Pie charts",
+        "tab": "bae89319.971aa",
+        "order": 2,
+        "disp": true,
+        "width": "9",
+        "collapse": false
+    },
+    {
+        "id": "bae89319.971aa",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Device Stats",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "7b1e5feb.05f048",
+        "type": "deepstream-server",
+        "z": "",
+        "server": "10.1.2.89",
+        "port": "6020",
+        "subscriptionTimeout": "500",
+        "rpcAckTimeout": "6000",
+        "rpcResponseTimeout": "10000",
+        "name": ""
+    },
+    {
+        "id": "5e1189e1.4b1a88",
+        "type": "deepstream-server",
+        "z": "",
+        "server": "10.10.2.90",
+        "port": "6020",
+        "subscriptionTimeout": "500",
+        "rpcAckTimeout": "6000",
+        "rpcResponseTimeout": "10000",
+        "name": ""
+    },
+    {
+        "id": "f4443008.a0be9",
+        "type": "deepstream-server",
+        "z": "",
+        "server": "10.10.2.91",
+        "port": "6020",
+        "subscriptionTimeout": "500",
+        "rpcAckTimeout": "6000",
+        "rpcResponseTimeout": "10000",
+        "name": ""
+    },
+    {
+        "id": "e467ba49.21b6f8",
+        "type": "DeviceStats",
+        "z": "c65a1f24.683bf",
+        "name": "",
+        "mem": true,
+        "nw": true,
+        "load": true,
+        "hostname": true,
+        "useString": false,
+        "x": 570,
+        "y": 680,
+        "wires": [
+            [
+                "2a025e5a.814a72",
+                "3379f20e.2e77ee",
+                "bddbb949.825798",
+                "e24294d9.deef28",
+                "15d58895.834057",
+                "c50da465.707a18",
+                "b2e9ff4c.279b3",
+                "d317c55c.d0871"
+            ]
+        ]
+    },
+    {
+        "id": "92ff27c9.b55ea8",
+        "type": "debug",
+        "z": "c65a1f24.683bf",
+        "name": "mem.free",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1400,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b2239989.c45b28",
+        "type": "debug",
+        "z": "c65a1f24.683bf",
+        "name": "mem.used",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1410,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "22880c05.86bbf4",
+        "type": "debug",
+        "z": "c65a1f24.683bf",
+        "name": "1min os.loadavg()",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1530,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "191cb514.55b4cb",
+        "type": "debug",
+        "z": "c65a1f24.683bf",
+        "name": "15min os.loadavg()",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1520,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "1fcb4e49.a009d2",
+        "type": "debug",
+        "z": "c65a1f24.683bf",
+        "name": "5min os.loadavg()",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1520,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "2a025e5a.814a72",
+        "type": "change",
+        "z": "c65a1f24.683bf",
+        "name": "1min os.loadavg()",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.load[0]*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 680,
+        "wires": [
+            [
+                "22880c05.86bbf4"
+            ]
+        ]
+    },
+    {
+        "id": "3379f20e.2e77ee",
+        "type": "change",
+        "z": "c65a1f24.683bf",
+        "name": "5min os.loadavg()",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.load[1]*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 720,
+        "wires": [
+            [
+                "1fcb4e49.a009d2"
+            ]
+        ]
+    },
+    {
+        "id": "bddbb949.825798",
+        "type": "change",
+        "z": "c65a1f24.683bf",
+        "name": "15min os.loadavg()",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.load[2]*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 760,
+        "wires": [
+            [
+                "191cb514.55b4cb"
+            ]
+        ]
+    },
+    {
+        "id": "e24294d9.deef28",
+        "type": "change",
+        "z": "c65a1f24.683bf",
+        "name": "% free mem",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.mem.free/999108*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 540,
+        "wires": [
+            [
+                "92ff27c9.b55ea8"
+            ]
+        ]
+    },
+    {
+        "id": "15d58895.834057",
+        "type": "change",
+        "z": "c65a1f24.683bf",
+        "name": "% used mem",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.mem.used/999108*100",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 580,
+        "wires": [
+            [
+                "b2239989.c45b28"
+            ]
+        ]
+    },
+    {
+        "id": "c50da465.707a18",
+        "type": "function",
+        "z": "c65a1f24.683bf",
+        "name": "MultiChart LOAD",
+        "func": "var msg1 = {};  // 1 minutes load average\nvar msg5 = {};  // 5 minutes load average\nvar msg15 = {};  // 15 minutes load average\n\nmsg1.topic = '1 min';\nmsg1.payload = msg.payload.load[0]*100;\n\nmsg5.topic = '5 min';\nmsg5.payload = msg.payload.load[1]*100;\n\nmsg15.topic = '15 min';\nmsg15.payload = msg.payload.load[2]*100;\n\nreturn [msg1,msg5,msg15];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 1250,
+        "y": 880,
+        "wires": [
+            [
+                "d2091205.d0a44",
+                "1d64f3d1.77d20c"
+            ],
+            [
+                "d2091205.d0a44"
+            ],
+            [
+                "d2091205.d0a44"
+            ]
+        ]
+    },
+    {
+        "id": "d2091205.d0a44",
+        "type": "ui_chart",
+        "z": "c65a1f24.683bf",
+        "name": "",
+        "group": "b2461ddd.863d6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Avg load %",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 2,
+        "x": 1470,
+        "y": 880,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b2e9ff4c.279b3",
+        "type": "function",
+        "z": "c65a1f24.683bf",
+        "name": "MultiChart MEM",
+        "func": "var msg1 = {};  // Free RAM\nvar msg2 = {};  // Used RAM\n\nmsg1.topic = 'FREE mem';\nmsg1.payload = msg.payload.mem.free/999108*100;\n\nmsg2.topic = 'USED mem';\nmsg2.payload = msg.payload.mem.used/999108*100;\n\nreturn [msg1,msg2];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1240,
+        "y": 480,
+        "wires": [
+            [
+                "52eff264.cb6eec",
+                "a7c1e08f.e7798"
+            ],
+            [
+                "52eff264.cb6eec",
+                "a7c1e08f.e7798"
+            ]
+        ]
+    },
+    {
+        "id": "52eff264.cb6eec",
+        "type": "ui_chart",
+        "z": "c65a1f24.683bf",
+        "name": "",
+        "group": "8407945a.3b9f68",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "RAM pie",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 2,
+        "x": 1460,
+        "y": 480,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a7c1e08f.e7798",
+        "type": "ui_chart",
+        "z": "c65a1f24.683bf",
+        "name": "",
+        "group": "b2461ddd.863d6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "RAM %",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 2,
+        "x": 1460,
+        "y": 440,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1d64f3d1.77d20c",
+        "type": "ui_gauge",
+        "z": "c65a1f24.683bf",
+        "name": "1 min. average",
+        "group": "8407945a.3b9f68",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "Load % (1 min.)",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "100",
+        "x": 1480,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "42bc6a97.d8e1dc",
+        "type": "debug",
+        "z": "c65a1f24.683bf",
+        "name": "DeviceStats",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 750,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d317c55c.d0871",
+        "type": "function",
+        "z": "c65a1f24.683bf",
+        "name": "Format data",
+        "func": "// Time and dates\nvar timestamp = new Date(msg.payload.tstamp).toISOString();\nmsg.payload.tstamp = timestamp;\nvar timestamp = msg.payload.uptime/3600/24;  // In days\nmsg.payload.uptime = timestamp;\n\n// Memory\nmsg.payload.mem.used = msg.payload.mem.used/999108*100;\nmsg.payload.mem.free = msg.payload.mem.free/999108*100;\nmsg.payload.mem.swapused = msg.payload.mem.swapused/999108*100;\nmsg.payload.mem.swapfree = msg.payload.mem.swapfree/999108*100;\n\n// CPU\nmsg.payload.load[0] = msg.payload.load[0]*100;  // 1 minute average\nmsg.payload.load[1] = msg.payload.load[1]*100;  // 5 minute average\nmsg.payload.load[2] = msg.payload.load[2]*100;  // 15 minute average\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 570,
+        "y": 360,
+        "wires": [
+            [
+                "42bc6a97.d8e1dc",
+                "10dcab7d.dba6fd"
+            ]
+        ]
+    },
+    {
+        "id": "76d85fad.9ccdc",
+        "type": "device",
+        "z": "c65a1f24.683bf",
+        "name": "device state",
+        "x": 570,
+        "y": 160,
+        "wires": [
+            [
+                "8bc7255f.e8576"
+            ]
+        ]
+    },
+    {
+        "id": "d4ac0ef9.c5d698",
+        "type": "ping",
+        "z": "c65a1f24.683bf",
+        "name": "ping supervisor",
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "4fd3dcef.1c8cdc"
+            ]
+        ]
+    },
+    {
+        "id": "b31e7a22.9faf48",
+        "type": "inject",
+        "z": "c65a1f24.683bf",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "76d85fad.9ccdc",
+                "d4ac0ef9.c5d698",
+                "8cb35923.0c3c5",
+                "e467ba49.21b6f8"
+            ]
+        ]
+    },
+    {
+        "id": "5a7cc43e.fdff8c",
+        "type": "debug",
+        "z": "c65a1f24.683bf",
+        "name": "Full device status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8bc7255f.e8576",
+        "type": "function",
+        "z": "c65a1f24.683bf",
+        "name": "balena",
+        "func": "msg.topic = 'balena';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 160,
+        "wires": [
+            [
+                "718809ef.bc7ff8"
+            ]
+        ]
+    },
+    {
+        "id": "4fd3dcef.1c8cdc",
+        "type": "function",
+        "z": "c65a1f24.683bf",
+        "name": "ping",
+        "func": "msg.topic = 'ping';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 200,
+        "wires": [
+            [
+                "718809ef.bc7ff8"
+            ]
+        ]
+    },
+    {
+        "id": "8cb35923.0c3c5",
+        "type": "function",
+        "z": "c65a1f24.683bf",
+        "name": "fusion config",
+        "func": "var timestamp = new Date();  // Unix timestamp\nvar lastSeen = timestamp.toISOString();  // ISO formated\n\nmsg = {\n  \"topic\": \"fusion-configuration\",\n  \"payload\": {\n    \"outputTopic\": \"device\",\n    \"inputTopics\": [\n      \"balena\",\n      \"ping\",\n      \"stats\"\n    ],\n    \"allowUndefined\": false,\n    \"onlyPayloads\": true\n  }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 670,
+        "y": 80,
+        "wires": [
+            [
+                "718809ef.bc7ff8"
+            ]
+        ]
+    },
+    {
+        "id": "10dcab7d.dba6fd",
+        "type": "function",
+        "z": "c65a1f24.683bf",
+        "name": "stats",
+        "func": "msg = {\n  \"topic\": \"stats\",\n  \"payload\": msg.payload\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 730,
+        "y": 300,
+        "wires": [
+            [
+                "718809ef.bc7ff8"
+            ]
+        ]
+    },
+    {
+        "id": "be2d57f3.4d4068",
+        "type": "debug",
+        "z": "c65a1f24.683bf",
+        "name": "DUPLICATES",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1220,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b8bc451d.c71d5",
+        "type": "function",
+        "z": "c65a1f24.683bf",
+        "name": "Last seen",
+        "func": "msg.payload.lastSeen = new Date().toISOString();\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1000,
+        "y": 80,
+        "wires": [
+            [
+                "efbecf14.84775"
+            ]
+        ]
+    },
+    {
+        "id": "efbecf14.84775",
+        "type": "function",
+        "z": "c65a1f24.683bf",
+        "name": "topic:\"device\"",
+        "func": "msg = {topic:\"device\", payload: msg.payload}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1180,
+        "y": 80,
+        "wires": [
+            [
+                "5a7cc43e.fdff8c",
+                "8475bbe7.5bf49"
+            ]
+        ]
+    },
+    {
+        "id": "c5386324.cd379",
+        "type": "Deepstream Event emit",
+        "z": "c65a1f24.683bf",
+        "name": "device 10.1.2.89",
+        "server": "7b1e5feb.05f048",
+        "method": "device",
+        "x": 1540,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e55802ac.6b1e38",
+        "type": "comment",
+        "z": "c65a1f24.683bf",
+        "name": "Updates every > 60 seconds to avoid CPU overload",
+        "info": "",
+        "x": 270,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8475bbe7.5bf49",
+        "type": "throttle",
+        "z": "c65a1f24.683bf",
+        "name": "c/ 1 min",
+        "throttleType": "time",
+        "timeLimit": "1",
+        "timeLimitType": "minutes",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 1360,
+        "y": 80,
+        "wires": [
+            [
+                "c5386324.cd379"
+            ]
+        ]
+    },
+    {
+        "id": "d8659f2.ff718e",
+        "type": "deduplicate",
+        "z": "c65a1f24.683bf",
+        "name": "",
+        "keyproperty": "",
+        "expiry": "2",
+        "x": 1030,
+        "y": 200,
+        "wires": [
+            [
+                "b8bc451d.c71d5"
+            ],
+            [
+                "be2d57f3.4d4068"
+            ]
+        ]
+    },
+    {
+        "id": "718809ef.bc7ff8",
+        "type": "fusion",
+        "z": "c65a1f24.683bf",
+        "name": "",
+        "x": 890,
+        "y": 200,
+        "wires": [
+            [
+                "d8659f2.ff718e"
+            ]
+        ]
+    },
+    {
+        "id": "ff0a3f8c.ca881",
+        "type": "Deepstream Event emit",
+        "z": "c65a1f24.683bf",
+        "name": "Swarm 10.10.2.90",
+        "server": "5e1189e1.4b1a88",
+        "method": "device",
+        "x": 1530,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9f19186f.d11878",
+        "type": "comment",
+        "z": "c65a1f24.683bf",
+        "name": "Servidores alternativos (Swarm): 10.10.2.90 y 10.10.2.91",
+        "info": "",
+        "x": 1410,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e46e5894.4bb7a8",
+        "type": "Deepstream Event emit",
+        "z": "c65a1f24.683bf",
+        "name": "Swarm 10.10.2.91",
+        "server": "f4443008.a0be9",
+        "method": "device",
+        "x": 1530,
+        "y": 260,
+        "wires": []
+    }
+]
