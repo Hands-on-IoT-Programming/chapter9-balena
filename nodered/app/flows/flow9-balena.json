@@ -994,7 +994,7 @@
         "type": "function",
         "z": "7b739af7.c3e8b4",
         "name": "Pusher credentials",
-        "func": "msg.payload = {\n    app_id:  env.get(\"APP_ID\"),\n    key:     env.get(\"APP_KEY\"),\n    secret:  env.get(\"APP_SECRET\"),\n    cluster: env.get(\"APP_CLUSTER\")\n}\n    \nreturn msg;\n\n//$(APP_KEY)\n//$(APP_SECRET)\n//process.env.APP_KEY",
+        "func": "msg.payload = {\n    app_id:  env.get(\"APP_ID\") || 0,\n    key:     env.get(\"APP_KEY\"),\n    secret:  env.get(\"APP_SECRET\"),\n    cluster: env.get(\"APP_CLUSTER\")\n}\n    \nreturn msg;\n\n//$(APP_KEY)\n//$(APP_SECRET)\n//process.env.APP_KEY",
         "outputs": 1,
         "noerr": 0,
         "x": 490,

@@ -254,8 +254,4 @@ module.exports = {
             audit: false
         }
     },
-    app_id:      process.env.APP_ID = "987351",
-    app_key:     process.env.APP_KEY="7bd084962b6e8963da2c",
-    app_secret:  process.env.APP_SECRET="fac4d1404b77cf960cfd",
-    app_cluster: process.env.APP_CLUSTER="eu",
 };
