@@ -1,5 +1,4 @@
 # NodeRED specifics
-.env
 data
 *.backup
 package-lock.json
