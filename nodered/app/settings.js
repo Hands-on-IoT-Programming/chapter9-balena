@@ -60,7 +60,7 @@ module.exports = {
     // Note: once you set this property, do not change it - doing so will prevent
     // node-red from being able to decrypt your existing credentials and they will be
     // lost.
-    //credentialSecret: "a-secret-key",
+    credentialSecret: process.env.SECRETKEY,
 
     // If not specified, data will be put in '$HOME/.node-red'
     userDir: `${process.cwd()}/data`,

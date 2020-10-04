@@ -674,6 +674,57 @@
         ]
     },
     {
+        "id": "ab0fb7ab.c00818",
+        "type": "inject",
+        "z": "dd125598.56b008",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "x": 210,
+        "y": 900,
+        "wires": [
+            [
+                "aeac2ca6.d9cc6"
+            ]
+        ]
+    },
+    {
+        "id": "aeac2ca6.d9cc6",
+        "type": "function",
+        "z": "dd125598.56b008",
+        "name": "Credentials secret",
+        "func": "msg.payload = env.get(\"SECRETKEY\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 900,
+        "wires": [
+            [
+                "44fa7563.03caec"
+            ]
+        ]
+    },
+    {
+        "id": "44fa7563.03caec",
+        "type": "debug",
+        "z": "dd125598.56b008",
+        "name": "SECRETKEY",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 720,
+        "y": 900,
+        "wires": []
+    },
+    {
         "id": "fde4866f.851ff8",
         "type": "ui_group",
         "z": "",
