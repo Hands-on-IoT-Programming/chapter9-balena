@@ -8,3 +8,11 @@ $ cd ./nodered/app
 $ cp .env.template .env
 ```
 Then add your Pusher credentials to `.env` file
+
+# Start the application
+This branch runs NodeRED in port 1880:
+```bash
+$ cd ./nodered-simulation/app
+$ bash start
+```
+Visit http://localhost:1880
