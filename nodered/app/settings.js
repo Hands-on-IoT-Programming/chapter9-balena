@@ -63,7 +63,8 @@ module.exports = {
     credentialSecret: process.env.SECRETKEY,
 
     // If not specified, data will be put in '$HOME/.node-red'
-    userDir: `${process.cwd()}/data`,
+    userDir: `${process.cwd()}/flows`,
+    //userDir: `${process.cwd()}/data`,
 
     // Node-RED scans the `nodes` directory in the install directory to find nodes.
     // The following property can be used to specify an additional directory to scan.
@@ -252,5 +253,9 @@ module.exports = {
             // Whether or not to include audit events in the log output
             audit: false
         }
-    }
+    },
+    app_id:      process.env.APP_ID = "987351",
+    app_key:     process.env.APP_KEY="7bd084962b6e8963da2c",
+    app_secret:  process.env.APP_SECRET="fac4d1404b77cf960cfd",
+    app_cluster: process.env.APP_CLUSTER="eu",
 };

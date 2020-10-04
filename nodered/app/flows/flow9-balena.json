@@ -7,6 +7,71 @@
         "info": ""
     },
     {
+        "id": "7b739af7.c3e8b4",
+        "type": "tab",
+        "label": "Debug Pusher",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "dd467d81.96db1",
+        "type": "tab",
+        "label": "global context",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1f021ba9.837634",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "fde4866f.851ff8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Temperature",
+        "tab": "1071f503.257ceb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9a4e895b.be7378",
+        "type": "ui_group",
+        "z": "",
+        "name": "Humidity",
+        "tab": "1071f503.257ceb",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9492d025.a8517",
+        "type": "ui_group",
+        "z": "",
+        "name": "Pressure",
+        "tab": "1071f503.257ceb",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "1071f503.257ceb",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sense Hat",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "d6706e6f.164d9",
         "type": "rpi-sensehatsim out",
         "z": "dd125598.56b008",
@@ -597,8 +662,8 @@
         "y": 780,
         "wires": [
             [
-                "a0ef358d.9012c8",
-                "de1c6952.5b59a8"
+                "de1c6952.5b59a8",
+                "a0ef358d.9012c8"
             ]
         ]
     },
@@ -674,9 +739,193 @@
         ]
     },
     {
-        "id": "ab0fb7ab.c00818",
+        "id": "3e7042e6.19efde",
+        "type": "pusher in",
+        "z": "7b739af7.c3e8b4",
+        "name": "",
+        "channel": "data_env",
+        "cluster": "eu",
+        "eventname": "env",
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "b8574bfa.f10b78"
+            ]
+        ]
+    },
+    {
+        "id": "b8574bfa.f10b78",
+        "type": "debug",
+        "z": "7b739af7.c3e8b4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 560,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "af1b4784.17a638",
+        "type": "function",
+        "z": "dd467d81.96db1",
+        "name": "get temperature",
+        "func": "msg.payload = global.get('temperature')\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "f8b15a4a.a7a0e8"
+            ]
+        ]
+    },
+    {
+        "id": "72fa5a01.dbb7a4",
         "type": "inject",
-        "z": "dd125598.56b008",
+        "z": "dd467d81.96db1",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "af1b4784.17a638"
+            ]
+        ]
+    },
+    {
+        "id": "f8b15a4a.a7a0e8",
+        "type": "debug",
+        "z": "dd467d81.96db1",
+        "name": "temperature",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 810,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9b988a24.0c0658",
+        "type": "debug",
+        "z": "dd467d81.96db1",
+        "name": "humidity",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "654f200d.68348",
+        "type": "debug",
+        "z": "dd467d81.96db1",
+        "name": "pressure",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 800,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b890688c.d6eb38",
+        "type": "function",
+        "z": "dd467d81.96db1",
+        "name": "get humidity",
+        "func": "msg.payload = global.get('humidity')\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [
+                "9b988a24.0c0658"
+            ]
+        ]
+    },
+    {
+        "id": "4815072c.4c2dc8",
+        "type": "inject",
+        "z": "dd467d81.96db1",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "b890688c.d6eb38"
+            ]
+        ]
+    },
+    {
+        "id": "d6d8164c.e32b58",
+        "type": "function",
+        "z": "dd467d81.96db1",
+        "name": "get pressure",
+        "func": "msg.payload = global.get('pressure')\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "654f200d.68348"
+            ]
+        ]
+    },
+    {
+        "id": "e51b122.2b8c6f",
+        "type": "inject",
+        "z": "dd467d81.96db1",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "d6d8164c.e32b58"
+            ]
+        ]
+    },
+    {
+        "id": "d755a43e.8f8e28",
+        "type": "inject",
+        "z": "7b739af7.c3e8b4",
         "name": "",
         "topic": "",
         "payload": "",
@@ -685,34 +934,35 @@
         "crontab": "",
         "once": true,
         "onceDelay": "2",
-        "x": 210,
-        "y": 900,
+        "x": 230,
+        "y": 260,
         "wires": [
             [
-                "aeac2ca6.d9cc6"
+                "5aa20918.050418",
+                "1e42d8ce.2cb6c7"
             ]
         ]
     },
     {
-        "id": "aeac2ca6.d9cc6",
+        "id": "5aa20918.050418",
         "type": "function",
-        "z": "dd125598.56b008",
+        "z": "7b739af7.c3e8b4",
         "name": "Credentials secret",
         "func": "msg.payload = env.get(\"SECRETKEY\")\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 470,
-        "y": 900,
+        "x": 490,
+        "y": 320,
         "wires": [
             [
-                "44fa7563.03caec"
+                "d19f902.cf0b87"
             ]
         ]
     },
     {
-        "id": "44fa7563.03caec",
+        "id": "d19f902.cf0b87",
         "type": "debug",
-        "z": "dd125598.56b008",
+        "z": "7b739af7.c3e8b4",
         "name": "SECRETKEY",
         "active": true,
         "tosidebar": true,
@@ -720,51 +970,39 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 720,
-        "y": 900,
+        "x": 740,
+        "y": 320,
         "wires": []
     },
     {
-        "id": "fde4866f.851ff8",
-        "type": "ui_group",
-        "z": "",
-        "name": "Temperature",
-        "tab": "1071f503.257ceb",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
+        "id": "fe477d56.6f9d7",
+        "type": "debug",
+        "z": "7b739af7.c3e8b4",
+        "name": "App ID",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 710,
+        "y": 260,
+        "wires": []
     },
     {
-        "id": "9a4e895b.be7378",
-        "type": "ui_group",
-        "z": "",
-        "name": "Humidity",
-        "tab": "1071f503.257ceb",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "9492d025.a8517",
-        "type": "ui_group",
-        "z": "",
-        "name": "Pressure",
-        "tab": "1071f503.257ceb",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "1071f503.257ceb",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Sense Hat",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
+        "id": "1e42d8ce.2cb6c7",
+        "type": "function",
+        "z": "7b739af7.c3e8b4",
+        "name": "Pusher credentials",
+        "func": "msg.payload = {\n    app_id:  env.get(\"APP_ID\"),\n    key:     env.get(\"APP_KEY\"),\n    secret:  env.get(\"APP_SECRET\"),\n    cluster: env.get(\"APP_CLUSTER\")\n}\n    \nreturn msg;\n\n//$(APP_KEY)\n//$(APP_SECRET)\n//process.env.APP_KEY",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 260,
+        "wires": [
+            [
+                "fe477d56.6f9d7"
+            ]
+        ]
     }
 ]
