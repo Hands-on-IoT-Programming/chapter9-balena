@@ -1,4 +1,4 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:12-stretch
+FROM node:12-stretch
 
 RUN apt-get update && apt-get install -yq --no-install-recommends \
   rpi.gpio \

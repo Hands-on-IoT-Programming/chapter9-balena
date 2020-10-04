@@ -111,8 +111,7 @@
         "y": 120,
         "wires": [
             [
-                "d6706e6f.164d9",
-                "af1328b6.553b98"
+                "d6706e6f.164d9"
             ]
         ]
     },
@@ -668,15 +667,6 @@
         ]
     },
     {
-        "id": "af1328b6.553b98",
-        "type": "rpi-sensehat out",
-        "z": "dd125598.56b008",
-        "name": "",
-        "x": 570,
-        "y": 120,
-        "wires": []
-    },
-    {
         "id": "1089046c.c3aefc",
         "type": "inject",
         "z": "dd125598.56b008",
@@ -692,7 +682,6 @@
         "y": 160,
         "wires": [
             [
-                "af1328b6.553b98",
                 "d6706e6f.164d9"
             ]
         ]
@@ -713,28 +702,7 @@
         "y": 80,
         "wires": [
             [
-                "d6706e6f.164d9",
-                "af1328b6.553b98"
-            ]
-        ]
-    },
-    {
-        "id": "c112d2bb.280a2",
-        "type": "rpi-sensehat in",
-        "z": "dd125598.56b008",
-        "name": "",
-        "motion": false,
-        "env": true,
-        "stick": true,
-        "x": 330,
-        "y": 460,
-        "wires": [
-            [
-                "fe065cfa.d64ce",
-                "db1b9f3c.039a",
-                "7f02c6dd.592ec8",
-                "1558567d.15aa7a",
-                "d7efdc7c.28a5e"
+                "d6706e6f.164d9"
             ]
         ]
     },
@@ -1002,6 +970,26 @@
         "wires": [
             [
                 "fe477d56.6f9d7"
+            ]
+        ]
+    },
+    {
+        "id": "93182fc6.0721c",
+        "type": "rpi-sensehatsim in",
+        "z": "dd125598.56b008",
+        "name": "",
+        "motion": false,
+        "env": true,
+        "stick": true,
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "db1b9f3c.039a",
+                "7f02c6dd.592ec8",
+                "1558567d.15aa7a",
+                "d7efdc7c.28a5e",
+                "fe065cfa.d64ce"
             ]
         ]
     }
