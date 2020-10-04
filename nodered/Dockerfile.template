@@ -24,7 +24,7 @@ COPY ./app/package.json .
 RUN npm install
 
 # All app files
-COPY ./app ./
+COPY ./app .
 
 # server.js will run when container starts up on the device
 CMD ["bash"]

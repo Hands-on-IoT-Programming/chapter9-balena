@@ -52,7 +52,7 @@ module.exports = {
 
     // To enabled pretty-printing of the flow within the flow file, set the following
     //  property to true:
-    //flowFilePretty: true,
+    flowFilePretty: true,
 
     // By default, credentials are encrypted in storage using a generated key. To
     // specify your own secret, set the following property.
@@ -216,7 +216,7 @@ module.exports = {
             favicon: "/usr/src/app/assets/favicon.ico"
         },
         header: {
-            title: process.env.TITLE || "Balena Node-RED",
+            title: `Hands on IoT Programming - ${process.env.FLOW}`,
             image: "/usr/src/app/assets/logo.png", // or null to remove image
             url: "https://github.com/Hands-on-IoT-Programming"
         },
@@ -230,6 +230,9 @@ module.exports = {
         },
         logout: {
             redirect: "http://therobotacademy.com"
+        },
+        projects: {
+            enabled: false // Enable the projects feature https://nodered.org/docs/user-guide/projects/
         }
     },
     // Configure the logging output
