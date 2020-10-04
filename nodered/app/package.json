@@ -5,7 +5,7 @@
     "main": "node_modules/node-red/red/red.js",
     "scripts": {
     "start": "FLOW=scratch node node_modules/node-red/red.js --settings=./settings.js",
-    "custom": "FLOW=custom node node_modules/node-red/red.js --settings=./settings.js --port ${PORT:-2880} ../flows/${FLOW:-balena.json}",
+    "custom": "FLOW=custom node node_modules/node-red/red.js --settings=./settings.js --port ${PORT:-80} flows/${FLOW:-balena.json}",
     "flow0": "FLOW=flow0 node node_modules/node-red/red.js --settings=./settings.js flows/flow0.json",
     "flow1": "FLOW=flow1 node node_modules/node-red/red.js --settings=./settings.js flows/flow1.json",
     "flow2": "FLOW=flow2 node node_modules/node-red/red.js --settings=./settings.js flows/flow2.json"
