@@ -21,12 +21,68 @@
         "info": ""
     },
     {
+        "id": "af88f1f8.ea59b",
+        "type": "tab",
+        "label": "Shell Script",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "1f021ba9.837634",
         "type": "subflow",
         "name": "Subflow 1",
         "info": "",
         "in": [],
         "out": []
+    },
+    {
+        "id": "e3eb352b.400518",
+        "type": "subflow",
+        "name": "Execute Shell Script",
+        "info": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "7ac673d9.5705ec"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 960,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "21fb1263.d7ac8e",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 960,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "21fb1263.d7ac8e",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 960,
+                "y": 400,
+                "wires": [
+                    {
+                        "id": "21fb1263.d7ac8e",
+                        "port": 2
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": "fde4866f.851ff8",
@@ -514,14 +570,15 @@
         "id": "de1c6952.5b59a8",
         "type": "debug",
         "z": "dd125598.56b008",
-        "name": "",
+        "name": "Log to NodeRED",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
-        "x": 590,
-        "y": 820,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 810,
+        "y": 840,
         "wires": []
     },
     {
@@ -653,7 +710,7 @@
         "z": "dd125598.56b008",
         "name": "",
         "throttleType": "time",
-        "timeLimit": "1",
+        "timeLimit": "4",
         "timeLimitType": "seconds",
         "countLimit": 0,
         "blockSize": 0,
@@ -662,8 +719,8 @@
         "y": 780,
         "wires": [
             [
-                "de1c6952.5b59a8",
-                "a0ef358d.9012c8"
+                "a0ef358d.9012c8",
+                "c0c82145.06b7f"
             ]
         ]
     },
@@ -1002,6 +1059,289 @@
         "wires": [
             [
                 "fe477d56.6f9d7"
+            ]
+        ]
+    },
+    {
+        "id": "bb320048.8f241",
+        "type": "file",
+        "z": "e3eb352b.400518",
+        "name": "Write script file",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "x": 860,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3dd07684.2d3fba",
+        "type": "exec",
+        "z": "e3eb352b.400518",
+        "command": "mktemp",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "",
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "58c05def.87c374"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ed708f51.2f428",
+        "type": "file",
+        "z": "e3eb352b.400518",
+        "name": "Delete script file",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "delete",
+        "x": 1020,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "21fb1263.d7ac8e",
+        "type": "exec",
+        "z": "e3eb352b.400518",
+        "command": " sh ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Execute the shell script",
+        "x": 690,
+        "y": 340,
+        "wires": [
+            [
+                "ed708f51.2f428"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b755ccf8.05194",
+        "type": "exec",
+        "z": "e3eb352b.400518",
+        "command": "chmod +x ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "",
+        "x": 1040,
+        "y": 200,
+        "wires": [
+            [
+                "8aaf8c0e.a8aea"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7ac673d9.5705ec",
+        "type": "change",
+        "z": "e3eb352b.400518",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "3dd07684.2d3fba"
+            ]
+        ]
+    },
+    {
+        "id": "d5763831.f64d58",
+        "type": "change",
+        "z": "e3eb352b.400518",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filename",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 200,
+        "wires": [
+            [
+                "b755ccf8.05194"
+            ]
+        ]
+    },
+    {
+        "id": "58c05def.87c374",
+        "type": "function",
+        "z": "e3eb352b.400518",
+        "name": "",
+        "func": "msg.filename = msg.payload.trim();\nmsg.payload = msg.command;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 180,
+        "wires": [
+            [
+                "bb320048.8f241",
+                "d5763831.f64d58"
+            ]
+        ]
+    },
+    {
+        "id": "8aaf8c0e.a8aea",
+        "type": "change",
+        "z": "e3eb352b.400518",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filename",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 340,
+        "wires": [
+            [
+                "21fb1263.d7ac8e"
+            ]
+        ]
+    },
+    {
+        "id": "a79e5aec.3c25d8",
+        "type": "comment",
+        "z": "e3eb352b.400518",
+        "name": "Execute shell script",
+        "info": "Execute the shell script in msg.payload.",
+        "x": 130,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b23f933e.6a674",
+        "type": "inject",
+        "z": "af88f1f8.ea59b",
+        "name": "Start",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 310,
+        "y": 240,
+        "wires": [
+            [
+                "3aecca5f.5f2616"
+            ]
+        ]
+    },
+    {
+        "id": "3aecca5f.5f2616",
+        "type": "template",
+        "z": "af88f1f8.ea59b",
+        "name": "Shell Script",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "#! /bin/sh\n\necho Timestamp is {{payload}}.",
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "5663dfbe.0b219"
+            ]
+        ]
+    },
+    {
+        "id": "5663dfbe.0b219",
+        "type": "subflow:e3eb352b.400518",
+        "z": "af88f1f8.ea59b",
+        "name": "",
+        "env": [],
+        "x": 670,
+        "y": 240,
+        "wires": [
+            [
+                "971bbff7.921cc"
+            ],
+            [
+                "971bbff7.921cc"
+            ],
+            [
+                "971bbff7.921cc"
+            ]
+        ]
+    },
+    {
+        "id": "971bbff7.921cc",
+        "type": "debug",
+        "z": "af88f1f8.ea59b",
+        "name": "Log the result",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 880,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c0c82145.06b7f",
+        "type": "function",
+        "z": "dd125598.56b008",
+        "name": "Log to Balena",
+        "func": "console.log(msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 600,
+        "y": 840,
+        "wires": [
+            [
+                "de1c6952.5b59a8"
             ]
         ]
     }
