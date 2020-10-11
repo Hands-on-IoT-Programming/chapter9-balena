@@ -25,6 +25,7 @@ RUN npm install
 
 # All app files
 COPY ./app .
+# This is to throw an error if .env is not present
 COPY ./app/.env .
 
 # server.js will run when container starts up on the device
