@@ -8,8 +8,9 @@ echo "${TIMEZONE}" > /etc/timezone
 
 # Source ENV variables from .env file
 set -o allexport; source .env; set +o allexport
-printenv
-echo 'The NodeRED secret key is' $SECRETKEY
+echo 'The NodeRED admin user is' $USERNAME
+echo 'The NodeRED admin password hash is' $PASSWORD
+echo 'The NodeRED secret key (for flow encryption) is' $SECRETKEY
 
 # Start app
 DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket \
