@@ -21,13 +21,6 @@
         "info": ""
     },
     {
-        "id": "af88f1f8.ea59b",
-        "type": "tab",
-        "label": "Shell Script",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "1f021ba9.837634",
         "type": "subflow",
         "name": "Subflow 1",
@@ -1258,75 +1251,6 @@
         "info": "Execute the shell script in msg.payload.",
         "x": 130,
         "y": 40,
-        "wires": []
-    },
-    {
-        "id": "b23f933e.6a674",
-        "type": "inject",
-        "z": "af88f1f8.ea59b",
-        "name": "Start",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 310,
-        "y": 240,
-        "wires": [
-            [
-                "3aecca5f.5f2616"
-            ]
-        ]
-    },
-    {
-        "id": "3aecca5f.5f2616",
-        "type": "template",
-        "z": "af88f1f8.ea59b",
-        "name": "Shell Script",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "#! /bin/sh\n\necho Timestamp is {{payload}}.",
-        "x": 470,
-        "y": 240,
-        "wires": [
-            [
-                "5663dfbe.0b219"
-            ]
-        ]
-    },
-    {
-        "id": "5663dfbe.0b219",
-        "type": "subflow:e3eb352b.400518",
-        "z": "af88f1f8.ea59b",
-        "name": "",
-        "env": [],
-        "x": 670,
-        "y": 240,
-        "wires": [
-            [
-                "971bbff7.921cc"
-            ],
-            [
-                "971bbff7.921cc"
-            ],
-            [
-                "971bbff7.921cc"
-            ]
-        ]
-    },
-    {
-        "id": "971bbff7.921cc",
-        "type": "debug",
-        "z": "af88f1f8.ea59b",
-        "name": "Log the result",
-        "active": true,
-        "console": "false",
-        "complete": "payload",
-        "x": 880,
-        "y": 240,
         "wires": []
     },
     {
