@@ -1,81 +1,144 @@
 [
     {
-        "id": "dd125598.56b008",
+        "id": "21308e40.a67852",
         "type": "tab",
         "label": "Sense hat",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "7b739af7.c3e8b4",
+        "id": "cec30840.248aa8",
         "type": "tab",
-        "label": "Debug Pusher",
+        "label": "Global context",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "dd467d81.96db1",
+        "id": "f00a487a.95faf8",
         "type": "tab",
-        "label": "global context",
+        "label": "Basic statistics",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "1f021ba9.837634",
-        "type": "subflow",
-        "name": "Subflow 1",
-        "info": "",
-        "in": [],
-        "out": []
+        "id": "f8d118e1.ddd038",
+        "type": "tab",
+        "label": "Store aggregated data",
+        "disabled": false,
+        "info": ""
     },
     {
-        "id": "e3eb352b.400518",
-        "type": "subflow",
-        "name": "Execute Shell Script",
-        "info": "",
-        "in": [
-            {
-                "x": 100,
-                "y": 200,
-                "wires": [
-                    {
-                        "id": "7ac673d9.5705ec"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 960,
-                "y": 280,
-                "wires": [
-                    {
-                        "id": "21fb1263.d7ac8e",
-                        "port": 0
-                    }
-                ]
+        "id": "c77ab3af.0f028",
+        "type": "tab",
+        "label": "InfluxDB",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fee98c91.8a287",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
             },
-            {
-                "x": 960,
-                "y": 340,
-                "wires": [
-                    {
-                        "id": "21fb1263.d7ac8e",
-                        "port": 1
-                    }
-                ]
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
             },
-            {
-                "x": 960,
-                "y": 400,
-                "wires": [
-                    {
-                        "id": "21fb1263.d7ac8e",
-                        "port": 2
-                    }
-                ]
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
             }
-        ]
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1071f503.257ceb",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sense Hat",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "fde4866f.851ff8",
@@ -83,7 +146,7 @@
         "z": "",
         "name": "Temperature",
         "tab": "1071f503.257ceb",
-        "order": 1,
+        "order": 2,
         "disp": true,
         "width": "6",
         "collapse": false
@@ -94,7 +157,7 @@
         "z": "",
         "name": "Humidity",
         "tab": "1071f503.257ceb",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false
@@ -105,34 +168,115 @@
         "z": "",
         "name": "Pressure",
         "tab": "1071f503.257ceb",
-        "order": 3,
+        "order": 4,
         "disp": true,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "1071f503.257ceb",
+        "id": "f315fd49.2b923",
+        "type": "ui_group",
+        "z": "",
+        "name": "Statistics",
+        "tab": "1071f503.257ceb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "42a92da.f061dd4",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f315fd49.2b923",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f3aaca43.eb9518",
+        "type": "ui_group",
+        "z": "",
+        "name": "Temperature Graph",
+        "tab": "cacb2438.d13638",
+        "order": 2,
+        "disp": true,
+        "width": "21",
+        "collapse": false
+    },
+    {
+        "id": "cacb2438.d13638",
         "type": "ui_tab",
         "z": "",
-        "name": "Sense Hat",
+        "name": "Time series",
         "icon": "dashboard",
         "order": 1,
         "disabled": false,
         "hidden": false
     },
     {
-        "id": "d6706e6f.164d9",
+        "id": "9023e951.d83b58",
+        "type": "json-db-collection",
+        "z": "",
+        "name": "temperature",
+        "collection": "instant-temperature",
+        "save": true
+    },
+    {
+        "id": "ccc0b64f.610828",
+        "type": "influxdb",
+        "z": "c77ab3af.0f028",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "database": "environment",
+        "name": "Environment Database",
+        "usetls": false,
+        "tls": ""
+    },
+    {
+        "id": "e221cd11.84b39",
+        "type": "influxdb",
+        "z": "f8d118e1.ddd038",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "database": "environment",
+        "name": "Environment Database",
+        "usetls": false,
+        "tls": ""
+    },
+    {
+        "id": "45b95ef7.9a4a6",
+        "type": "rpi-sensehatsim in",
+        "z": "21308e40.a67852",
+        "name": "",
+        "motion": false,
+        "env": true,
+        "stick": true,
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "98eaba5e.148b28",
+                "feb8749b.80c978",
+                "bbf2917c.a79ff",
+                "c2c0bf2b.00e5a",
+                "52da14c9.8fba5c"
+            ]
+        ]
+    },
+    {
+        "id": "e78d86da.079de8",
         "type": "rpi-sensehatsim out",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "",
         "x": 580,
         "y": 80,
         "wires": []
     },
     {
-        "id": "6b4a9d5c.7a06b4",
+        "id": "f0ef2ea5.c6602",
         "type": "debug",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Environment data",
         "active": false,
         "tosidebar": true,
@@ -145,30 +289,29 @@
         "wires": []
     },
     {
-        "id": "344ae513.ac465a",
+        "id": "2928087d.6c2f08",
         "type": "inject",
-        "z": "dd125598.56b008",
-        "name": "corner colors",
+        "z": "21308e40.a67852",
+        "name": "",
         "topic": "",
         "payload": "0,0,red,0,7,#00ff00,7,7,yellow,7,0,0,0,255",
         "payloadType": "str",
-        "repeat": "3",
+        "repeat": "",
         "crontab": "",
-        "once": true,
-        "onceDelay": "1.1",
-        "x": 220,
-        "y": 120,
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 350,
+        "y": 80,
         "wires": [
             [
-                "d6706e6f.164d9",
-                "af1328b6.553b98"
+                "e78d86da.079de8"
             ]
         ]
     },
     {
-        "id": "6c8b5a67.a98fe4",
+        "id": "4d948b29.59eda4",
         "type": "comment",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Temperature, humidity, pressure",
         "info": "",
         "x": 270,
@@ -176,19 +319,19 @@
         "wires": []
     },
     {
-        "id": "3ba6bec7.92b4d2",
+        "id": "31b8ccaa.d74294",
         "type": "comment",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "LED matrix",
         "info": "",
-        "x": 180,
+        "x": 220,
         "y": 40,
         "wires": []
     },
     {
-        "id": "2898f700.41da8a",
+        "id": "30f47a9a.7f1186",
         "type": "ui_chart",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Temperature",
         "group": "fde4866f.851ff8",
         "order": 1,
@@ -228,9 +371,9 @@
         ]
     },
     {
-        "id": "39f62056.56cdd",
+        "id": "86c8210f.8267",
         "type": "ui_gauge",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Temperature",
         "group": "fde4866f.851ff8",
         "order": 2,
@@ -254,9 +397,9 @@
         "wires": []
     },
     {
-        "id": "7f02c6dd.592ec8",
+        "id": "98eaba5e.148b28",
         "type": "change",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Temperature",
         "rules": [
             {
@@ -283,16 +426,16 @@
         "y": 340,
         "wires": [
             [
-                "2898f700.41da8a",
-                "39f62056.56cdd",
-                "f59c148c.c319f8"
+                "30f47a9a.7f1186",
+                "86c8210f.8267",
+                "d903566d.4c0a28"
             ]
         ]
     },
     {
-        "id": "db1b9f3c.039a",
+        "id": "feb8749b.80c978",
         "type": "switch",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "event types",
         "property": "topic",
         "propertyType": "msg",
@@ -315,19 +458,19 @@
         "y": 200,
         "wires": [
             [
-                "6b4a9d5c.7a06b4"
+                "f0ef2ea5.c6602"
             ],
             [
-                "1db58d74.3b57c3"
+                "a9d46f08.0458b"
             ]
         ]
     },
     {
-        "id": "1db58d74.3b57c3",
+        "id": "a9d46f08.0458b",
         "type": "debug",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Joystick data",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -338,9 +481,9 @@
         "wires": []
     },
     {
-        "id": "bb2c5afb.492b68",
+        "id": "870eaba1.3e2898",
         "type": "ui_chart",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Humidity",
         "group": "9a4e895b.be7378",
         "order": 1,
@@ -380,9 +523,9 @@
         ]
     },
     {
-        "id": "9061986e.5fd768",
+        "id": "82cdf158.ab777",
         "type": "ui_gauge",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Humidity",
         "group": "9a4e895b.be7378",
         "order": 2,
@@ -406,9 +549,9 @@
         "wires": []
     },
     {
-        "id": "1558567d.15aa7a",
+        "id": "bbf2917c.a79ff",
         "type": "change",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Humidity",
         "rules": [
             {
@@ -435,17 +578,17 @@
         "y": 460,
         "wires": [
             [
-                "bb2c5afb.492b68",
-                "9061986e.5fd768",
-                "9bcf270d.2665f8",
-                "7c9c123e.952f7c"
+                "870eaba1.3e2898",
+                "82cdf158.ab777",
+                "456bf51c.f047ac",
+                "b2eab8f1.a74838"
             ]
         ]
     },
     {
-        "id": "5877b9bb.43f2a8",
+        "id": "3ea5a00f.f7139",
         "type": "ui_chart",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "",
         "group": "9492d025.a8517",
         "order": 1,
@@ -485,9 +628,9 @@
         ]
     },
     {
-        "id": "b1985bf9.bd8d18",
+        "id": "6904e7d9.3e2328",
         "type": "ui_gauge",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Pressure",
         "group": "9492d025.a8517",
         "order": 2,
@@ -511,9 +654,9 @@
         "wires": []
     },
     {
-        "id": "d7efdc7c.28a5e",
+        "id": "c2c0bf2b.00e5a",
         "type": "change",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "Pressure",
         "rules": [
             {
@@ -540,17 +683,17 @@
         "y": 600,
         "wires": [
             [
-                "5877b9bb.43f2a8",
-                "b1985bf9.bd8d18",
-                "280f3161.6ffd1e",
-                "d940e676.a22288"
+                "3ea5a00f.f7139",
+                "6904e7d9.3e2328",
+                "aafa5256.96045",
+                "f0b074b1.1831d8"
             ]
         ]
     },
     {
-        "id": "a0ef358d.9012c8",
+        "id": "4f64d5c9.f24cfc",
         "type": "pusher out",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "",
         "channel": "data_env",
         "cluster": "eu",
@@ -560,24 +703,57 @@
         "wires": []
     },
     {
-        "id": "de1c6952.5b59a8",
+        "id": "66aa35d6.b589ac",
         "type": "debug",
-        "z": "dd125598.56b008",
-        "name": "Log to NodeRED",
+        "z": "21308e40.a67852",
+        "name": "messages",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 810,
-        "y": 840,
+        "x": 590,
+        "y": 820,
         "wires": []
     },
     {
-        "id": "38c5c48.36ca93c",
+        "id": "bb270b26.18d878",
+        "type": "pusher in",
+        "z": "f00a487a.95faf8",
+        "name": "",
+        "channel": "data_env",
+        "cluster": "eu",
+        "eventname": "env",
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "2bc107be.598d38",
+                "ff6990d1.d87a8",
+                "3c167705.047788"
+            ]
+        ]
+    },
+    {
+        "id": "fc0d1a5.8b429e8",
         "type": "debug",
-        "z": "dd125598.56b008",
+        "z": "f00a487a.95faf8",
+        "name": "Last 10 samples",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 920,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c4b198e0.e77e88",
+        "type": "debug",
+        "z": "21308e40.a67852",
         "name": "temperature",
         "active": false,
         "tosidebar": true,
@@ -590,9 +766,9 @@
         "wires": []
     },
     {
-        "id": "9bcf270d.2665f8",
+        "id": "456bf51c.f047ac",
         "type": "debug",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "humidity",
         "active": false,
         "tosidebar": true,
@@ -605,9 +781,9 @@
         "wires": []
     },
     {
-        "id": "280f3161.6ffd1e",
+        "id": "aafa5256.96045",
         "type": "debug",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "pressure",
         "active": false,
         "tosidebar": true,
@@ -620,9 +796,9 @@
         "wires": []
     },
     {
-        "id": "f59c148c.c319f8",
+        "id": "d903566d.4c0a28",
         "type": "function",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "save temperature",
         "func": "global.set('temperature' , msg.payload)\n\nreturn msg;",
         "outputs": 1,
@@ -631,14 +807,14 @@
         "y": 380,
         "wires": [
             [
-                "38c5c48.36ca93c"
+                "c4b198e0.e77e88"
             ]
         ]
     },
     {
-        "id": "9608d297.a12a4",
+        "id": "134492c2.6819cd",
         "type": "debug",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "humidity",
         "active": false,
         "tosidebar": true,
@@ -651,9 +827,9 @@
         "wires": []
     },
     {
-        "id": "7c9c123e.952f7c",
+        "id": "b2eab8f1.a74838",
         "type": "function",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "save humidity",
         "func": "global.set('humidity' , msg.payload)\n\nreturn msg;",
         "outputs": 1,
@@ -662,14 +838,14 @@
         "y": 560,
         "wires": [
             [
-                "9608d297.a12a4"
+                "134492c2.6819cd"
             ]
         ]
     },
     {
-        "id": "9ee134e9.4c20e8",
+        "id": "1adee977.c64887",
         "type": "debug",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "pressure",
         "active": false,
         "tosidebar": true,
@@ -682,9 +858,9 @@
         "wires": []
     },
     {
-        "id": "d940e676.a22288",
+        "id": "f0b074b1.1831d8",
         "type": "function",
-        "z": "dd125598.56b008",
+        "z": "21308e40.a67852",
         "name": "save pressure",
         "func": "global.set('pressure' , msg.payload)\n\nreturn msg;",
         "outputs": 1,
@@ -693,136 +869,14 @@
         "y": 740,
         "wires": [
             [
-                "9ee134e9.4c20e8"
+                "1adee977.c64887"
             ]
         ]
     },
     {
-        "id": "fe065cfa.d64ce",
-        "type": "throttle",
-        "z": "dd125598.56b008",
-        "name": "",
-        "throttleType": "time",
-        "timeLimit": "4",
-        "timeLimitType": "seconds",
-        "countLimit": 0,
-        "blockSize": 0,
-        "locked": false,
-        "x": 410,
-        "y": 780,
-        "wires": [
-            [
-                "a0ef358d.9012c8",
-                "c0c82145.06b7f"
-            ]
-        ]
-    },
-    {
-        "id": "af1328b6.553b98",
-        "type": "rpi-sensehat out",
-        "z": "dd125598.56b008",
-        "name": "",
-        "x": 570,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "1089046c.c3aefc",
-        "type": "inject",
-        "z": "dd125598.56b008",
-        "name": "purple column",
-        "topic": "",
-        "payload": "4-6,*,purple",
-        "payloadType": "str",
-        "repeat": "3",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "2.1",
-        "x": 300,
-        "y": 160,
-        "wires": [
-            [
-                "af1328b6.553b98",
-                "d6706e6f.164d9"
-            ]
-        ]
-    },
-    {
-        "id": "3ff52e3b.daf042",
-        "type": "inject",
-        "z": "dd125598.56b008",
-        "name": "",
-        "topic": "",
-        "payload": "*,*,white",
-        "payloadType": "str",
-        "repeat": "3",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0.1",
-        "x": 160,
-        "y": 80,
-        "wires": [
-            [
-                "d6706e6f.164d9",
-                "af1328b6.553b98"
-            ]
-        ]
-    },
-    {
-        "id": "c112d2bb.280a2",
-        "type": "rpi-sensehat in",
-        "z": "dd125598.56b008",
-        "name": "",
-        "motion": false,
-        "env": true,
-        "stick": true,
-        "x": 330,
-        "y": 460,
-        "wires": [
-            [
-                "fe065cfa.d64ce",
-                "db1b9f3c.039a",
-                "7f02c6dd.592ec8",
-                "1558567d.15aa7a",
-                "d7efdc7c.28a5e"
-            ]
-        ]
-    },
-    {
-        "id": "3e7042e6.19efde",
-        "type": "pusher in",
-        "z": "7b739af7.c3e8b4",
-        "name": "",
-        "channel": "data_env",
-        "cluster": "eu",
-        "eventname": "env",
-        "x": 390,
-        "y": 120,
-        "wires": [
-            [
-                "b8574bfa.f10b78"
-            ]
-        ]
-    },
-    {
-        "id": "b8574bfa.f10b78",
-        "type": "debug",
-        "z": "7b739af7.c3e8b4",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 580,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "af1b4784.17a638",
+        "id": "1ab1f7e2.a38c58",
         "type": "function",
-        "z": "dd467d81.96db1",
+        "z": "cec30840.248aa8",
         "name": "get temperature",
         "func": "msg.payload = global.get('temperature')\n\nreturn msg;",
         "outputs": 1,
@@ -831,14 +885,14 @@
         "y": 200,
         "wires": [
             [
-                "f8b15a4a.a7a0e8"
+                "f8aa3305.90eb8"
             ]
         ]
     },
     {
-        "id": "72fa5a01.dbb7a4",
+        "id": "60df3316.5cab4c",
         "type": "inject",
-        "z": "dd467d81.96db1",
+        "z": "cec30840.248aa8",
         "name": "",
         "topic": "",
         "payload": "",
@@ -851,14 +905,14 @@
         "y": 200,
         "wires": [
             [
-                "af1b4784.17a638"
+                "1ab1f7e2.a38c58"
             ]
         ]
     },
     {
-        "id": "f8b15a4a.a7a0e8",
+        "id": "f8aa3305.90eb8",
         "type": "debug",
-        "z": "dd467d81.96db1",
+        "z": "cec30840.248aa8",
         "name": "temperature",
         "active": true,
         "tosidebar": true,
@@ -871,9 +925,9 @@
         "wires": []
     },
     {
-        "id": "9b988a24.0c0658",
+        "id": "fbac00c7.b6eda",
         "type": "debug",
-        "z": "dd467d81.96db1",
+        "z": "cec30840.248aa8",
         "name": "humidity",
         "active": true,
         "tosidebar": true,
@@ -886,9 +940,9 @@
         "wires": []
     },
     {
-        "id": "654f200d.68348",
+        "id": "cf5a6b98.e95958",
         "type": "debug",
-        "z": "dd467d81.96db1",
+        "z": "cec30840.248aa8",
         "name": "pressure",
         "active": true,
         "tosidebar": true,
@@ -901,9 +955,9 @@
         "wires": []
     },
     {
-        "id": "b890688c.d6eb38",
+        "id": "60356caa.260604",
         "type": "function",
-        "z": "dd467d81.96db1",
+        "z": "cec30840.248aa8",
         "name": "get humidity",
         "func": "msg.payload = global.get('humidity')\n\nreturn msg;",
         "outputs": 1,
@@ -912,14 +966,14 @@
         "y": 280,
         "wires": [
             [
-                "9b988a24.0c0658"
+                "fbac00c7.b6eda"
             ]
         ]
     },
     {
-        "id": "4815072c.4c2dc8",
+        "id": "d5409ef4.8a5c3",
         "type": "inject",
-        "z": "dd467d81.96db1",
+        "z": "cec30840.248aa8",
         "name": "",
         "topic": "",
         "payload": "",
@@ -932,14 +986,14 @@
         "y": 280,
         "wires": [
             [
-                "b890688c.d6eb38"
+                "60356caa.260604"
             ]
         ]
     },
     {
-        "id": "d6d8164c.e32b58",
+        "id": "92f09c4f.77789",
         "type": "function",
-        "z": "dd467d81.96db1",
+        "z": "cec30840.248aa8",
         "name": "get pressure",
         "func": "msg.payload = global.get('pressure')\n\nreturn msg;",
         "outputs": 1,
@@ -948,14 +1002,14 @@
         "y": 360,
         "wires": [
             [
-                "654f200d.68348"
+                "cf5a6b98.e95958"
             ]
         ]
     },
     {
-        "id": "e51b122.2b8c6f",
+        "id": "a45bd9c8.339528",
         "type": "inject",
-        "z": "dd467d81.96db1",
+        "z": "cec30840.248aa8",
         "name": "",
         "topic": "",
         "payload": "",
@@ -968,304 +1022,951 @@
         "y": 360,
         "wires": [
             [
-                "d6d8164c.e32b58"
+                "92f09c4f.77789"
             ]
         ]
     },
     {
-        "id": "d755a43e.8f8e28",
+        "id": "52da14c9.8fba5c",
+        "type": "throttle",
+        "z": "21308e40.a67852",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "2",
+        "timeLimitType": "seconds",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 410,
+        "y": 780,
+        "wires": [
+            [
+                "66aa35d6.b589ac",
+                "4f64d5c9.f24cfc",
+                "46459463.c5462c"
+            ]
+        ]
+    },
+    {
+        "id": "2bc107be.598d38",
+        "type": "buffer-array",
+        "z": "f00a487a.95faf8",
+        "name": "",
+        "bufferLen": "10",
+        "startWhenFilled": false,
+        "x": 570,
+        "y": 220,
+        "wires": [
+            [
+                "fc0d1a5.8b429e8",
+                "95bc4888.1dc8d8",
+                "4992488e.00f708"
+            ]
+        ]
+    },
+    {
+        "id": "ff6990d1.d87a8",
+        "type": "interval-length",
+        "z": "f00a487a.95faf8",
+        "format": "mills",
+        "bytopic": false,
+        "minimum": "",
+        "maximum": "",
+        "window": "",
+        "timeout": false,
+        "msgTimeout": "",
+        "minimumunit": "msecs",
+        "maximumunit": "msecs",
+        "windowunit": "msecs",
+        "msgTimeoutUnit": "msecs",
+        "reset": false,
+        "startup": false,
+        "msgField": "payload",
+        "timestampField": "timestamp",
+        "repeatTimeout": false,
+        "name": "",
+        "x": 420,
+        "y": 80,
+        "wires": [
+            [
+                "a0c595ab.fa9128"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "95bc4888.1dc8d8",
+        "type": "debug",
+        "z": "f00a487a.95faf8",
+        "name": "msg.payload[9] -> MOST RECENT",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[9].temperature",
+        "targetType": "msg",
+        "x": 980,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4992488e.00f708",
+        "type": "debug",
+        "z": "f00a487a.95faf8",
+        "name": "msg.payload[0] -> OLDEST",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload[0].temperature",
+        "targetType": "msg",
+        "x": 960,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a0c595ab.fa9128",
+        "type": "debug",
+        "z": "f00a487a.95faf8",
+        "name": "Last INTERVAL",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 920,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "16f621c6.5c6aee",
+        "type": "function",
+        "z": "f00a487a.95faf8",
+        "name": "standardDeviation",
+        "func": "msg.topic=\"standardDeviation\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 620,
+        "wires": [
+            [
+                "af35f1da.61f24"
+            ]
+        ]
+    },
+    {
+        "id": "12c13b1e.ff04b5",
+        "type": "function",
+        "z": "f00a487a.95faf8",
+        "name": "mean",
+        "func": "msg.topic=\"mean\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 560,
+        "wires": [
+            [
+                "dee2f3d8.d5e29"
+            ]
+        ]
+    },
+    {
+        "id": "dee2f3d8.d5e29",
+        "type": "statistics",
+        "z": "f00a487a.95faf8",
+        "name": "statistics over 10",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 630,
+        "y": 560,
+        "wires": [
+            [
+                "616f042b.87437c",
+                "d3039eec.02d7d",
+                "75dee813.4e1318"
+            ]
+        ]
+    },
+    {
+        "id": "616f042b.87437c",
+        "type": "debug",
+        "z": "f00a487a.95faf8",
+        "name": "AVERAGE temperature (last 10)",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 990,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "3c167705.047788",
+        "type": "change",
+        "z": "f00a487a.95faf8",
+        "name": "temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperature",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 400,
+        "wires": [
+            [
+                "da94596a.0d2188",
+                "f39c6034.25feb",
+                "dd4dd871.0552a8",
+                "1356e68.0112c1a"
+            ]
+        ]
+    },
+    {
+        "id": "da94596a.0d2188",
+        "type": "buffer-array",
+        "z": "f00a487a.95faf8",
+        "name": "",
+        "bufferLen": "10",
+        "startWhenFilled": false,
+        "x": 290,
+        "y": 560,
+        "wires": [
+            [
+                "12c13b1e.ff04b5",
+                "16f621c6.5c6aee"
+            ]
+        ]
+    },
+    {
+        "id": "6a02ae7b.f102",
+        "type": "debug",
+        "z": "f00a487a.95faf8",
+        "name": "STANDARD DEV temperature (last 10)",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 970,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "af35f1da.61f24",
+        "type": "statistics",
+        "z": "f00a487a.95faf8",
+        "name": "statistics over 10",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 610,
+        "y": 620,
+        "wires": [
+            [
+                "6a02ae7b.f102",
+                "47ac34bd.0f964c"
+            ]
+        ]
+    },
+    {
+        "id": "46459463.c5462c",
+        "type": "interval-length",
+        "z": "21308e40.a67852",
+        "format": "mills",
+        "bytopic": false,
+        "minimum": "",
+        "maximum": "",
+        "window": "",
+        "timeout": false,
+        "msgTimeout": "",
+        "minimumunit": "msecs",
+        "maximumunit": "msecs",
+        "windowunit": "msecs",
+        "msgTimeoutUnit": "msecs",
+        "reset": false,
+        "startup": false,
+        "msgField": "payload",
+        "timestampField": "timestamp",
+        "repeatTimeout": false,
+        "name": "",
+        "x": 560,
+        "y": 880,
+        "wires": [
+            [
+                "dfd02219.fe3b6"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "dfd02219.fe3b6",
+        "type": "debug",
+        "z": "21308e40.a67852",
+        "name": "Intervals",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 750,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "62adcdca.2488b4",
+        "type": "ui_chart",
+        "z": "f00a487a.95faf8",
+        "name": "Temperature",
+        "group": "f3aaca43.eb9518",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "{{msg.topic}}",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "25",
+        "removeOlder": "60",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 1190,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f39c6034.25feb",
+        "type": "function",
+        "z": "f00a487a.95faf8",
+        "name": "Instant temperature",
+        "func": "// msg output for graphing instant data\nmsg1 = {payload: msg.payload, topic: 'Instant read'};\nreturn [msg1];",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 990,
+        "y": 400,
+        "wires": [
+            [
+                "62adcdca.2488b4"
+            ]
+        ]
+    },
+    {
+        "id": "d3039eec.02d7d",
+        "type": "function",
+        "z": "f00a487a.95faf8",
+        "name": "Temperature mean",
+        "func": "// msg output for graphing average data\nmsg2 = {payload: msg.payload, topic: 'Average over last 10 reads'};\nreturn [msg2];",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 990,
+        "y": 440,
+        "wires": [
+            [
+                "62adcdca.2488b4"
+            ]
+        ]
+    },
+    {
+        "id": "47ac34bd.0f964c",
+        "type": "function",
+        "z": "f00a487a.95faf8",
+        "name": "Temperature stdDev",
+        "func": "// msg output for graphing standard deviation data\nmsg3 = {payload: msg.payload, topic: 'Standard deviation over last 10 reads'};\nreturn [msg3];",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 980,
+        "y": 480,
+        "wires": [
+            [
+                "62adcdca.2488b4"
+            ]
+        ]
+    },
+    {
+        "id": "ba83d3a4.23ad",
+        "type": "DataIn",
+        "z": "f8d118e1.ddd038",
+        "collection": "9023e951.d83b58",
+        "name": "Instant Temperature",
+        "update": true,
+        "path": "/temperature",
+        "x": 960,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1356e68.0112c1a",
+        "type": "link out",
+        "z": "f00a487a.95faf8",
+        "name": "Store temperature",
+        "links": [
+            "6c7005d6.b64d5c"
+        ],
+        "x": 1155,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6c7005d6.b64d5c",
+        "type": "link in",
+        "z": "f8d118e1.ddd038",
+        "name": "IN-Store temperature",
+        "links": [
+            "1356e68.0112c1a"
+        ],
+        "x": 515,
+        "y": 240,
+        "wires": [
+            [
+                "a1f41c67.d1372"
+            ]
+        ]
+    },
+    {
+        "id": "a1f41c67.d1372",
+        "type": "throttle",
+        "z": "f8d118e1.ddd038",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "10",
+        "timeLimitType": "seconds",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 710,
+        "y": 240,
+        "wires": [
+            [
+                "7e9cb44b.d40adc"
+            ]
+        ]
+    },
+    {
+        "id": "49423bdc.9322e4",
+        "type": "debug",
+        "z": "f8d118e1.ddd038",
+        "name": "Raw data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1120,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3c8fc4ef.4c68bc",
+        "type": "function",
+        "z": "f8d118e1.ddd038",
+        "name": "Format and add timestamp",
+        "func": "const timestamp = new Date();\n\nmsg.payload = [{\n    timestamp:   timestamp.toString(),\n    temperature: msg.payload\n    }];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 680,
+        "y": 100,
+        "wires": [
+            [
+                "ba83d3a4.23ad"
+            ]
+        ]
+    },
+    {
+        "id": "ae93d4ee.dd9938",
+        "type": "influxdb in",
+        "z": "c77ab3af.0f028",
+        "influxdb": "ccc0b64f.610828",
+        "name": "'temperatures' SELECT query",
+        "query": "SELECT * FROM temperatures",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "x": 810,
+        "y": 80,
+        "wires": [
+            [
+                "eb1edf63.af0d"
+            ]
+        ]
+    },
+    {
+        "id": "f440332c.3280e",
         "type": "inject",
-        "z": "7b739af7.c3e8b4",
+        "z": "c77ab3af.0f028",
         "name": "",
         "topic": "",
         "payload": "",
         "payloadType": "date",
         "repeat": "",
         "crontab": "",
-        "once": true,
-        "onceDelay": "2",
-        "x": 230,
-        "y": 260,
+        "once": false,
+        "x": 580,
+        "y": 80,
         "wires": [
             [
-                "5aa20918.050418",
-                "1e42d8ce.2cb6c7"
+                "ae93d4ee.dd9938",
+                "106a41a9.51f01e"
             ]
         ]
     },
     {
-        "id": "5aa20918.050418",
-        "type": "function",
-        "z": "7b739af7.c3e8b4",
-        "name": "Credentials secret",
-        "func": "msg.payload = env.get(\"SECRETKEY\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 320,
-        "wires": [
-            [
-                "d19f902.cf0b87"
-            ]
-        ]
-    },
-    {
-        "id": "d19f902.cf0b87",
+        "id": "eb1edf63.af0d",
         "type": "debug",
-        "z": "7b739af7.c3e8b4",
-        "name": "SECRETKEY",
+        "z": "c77ab3af.0f028",
+        "name": "",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 740,
-        "y": 320,
+        "x": 1050,
+        "y": 80,
         "wires": []
     },
     {
-        "id": "fe477d56.6f9d7",
+        "id": "601de009.89e4f",
+        "type": "inject",
+        "z": "c77ab3af.0f028",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [
+                "a98b2eea.ffd2e"
+            ]
+        ]
+    },
+    {
+        "id": "a98b2eea.ffd2e",
+        "type": "function",
+        "z": "c77ab3af.0f028",
+        "name": "SELECT points in the last 60s",
+        "func": "//msg.query=\"SELECT * FROM temperatures\";\n//msg.query=\"SELECT last(temperature),time,location,room FROM sense_hat\";\n//msg.query=\"SELECT * FROM sense_hat WHERE time > now() - 1h limit 4\";\n//msg.query=\"SELECT * FROM sense_hat WHERE time > now() - 1m\";\nmsg.query=\"SELECT * FROM sense_hat WHERE time > now() - 60s\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 790,
+        "y": 160,
+        "wires": [
+            [
+                "792e2161.f7e8a"
+            ]
+        ]
+    },
+    {
+        "id": "792e2161.f7e8a",
+        "type": "influxdb in",
+        "z": "c77ab3af.0f028",
+        "influxdb": "ccc0b64f.610828",
+        "name": "'sense_hat' SELECT query II",
+        "query": "",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "x": 1080,
+        "y": 160,
+        "wires": [
+            [
+                "c1fe750c.3590b8",
+                "2e9ee36a.faaa9c"
+            ]
+        ]
+    },
+    {
+        "id": "f44bb649.e95758",
         "type": "debug",
-        "z": "7b739af7.c3e8b4",
-        "name": "App ID",
+        "z": "c77ab3af.0f028",
+        "name": "Last point",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 710,
-        "y": 260,
+        "x": 1460,
+        "y": 160,
         "wires": []
     },
     {
-        "id": "1e42d8ce.2cb6c7",
-        "type": "function",
-        "z": "7b739af7.c3e8b4",
-        "name": "Pusher credentials",
-        "func": "msg.payload = {\n    app_id:  env.get(\"APP_ID\") || 0,\n    key:     env.get(\"APP_KEY\"),\n    secret:  env.get(\"APP_SECRET\"),\n    cluster: env.get(\"APP_CLUSTER\")\n}\n    \nreturn msg;\n\n//$(APP_KEY)\n//$(APP_SECRET)\n//process.env.APP_KEY",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 260,
-        "wires": [
-            [
-                "fe477d56.6f9d7"
-            ]
-        ]
-    },
-    {
-        "id": "bb320048.8f241",
-        "type": "file",
-        "z": "e3eb352b.400518",
-        "name": "Write script file",
-        "filename": "",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "x": 860,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3dd07684.2d3fba",
-        "type": "exec",
-        "z": "e3eb352b.400518",
-        "command": "mktemp",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "",
-        "timer": "",
-        "name": "",
-        "x": 420,
-        "y": 200,
-        "wires": [
-            [
-                "58c05def.87c374"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "ed708f51.2f428",
-        "type": "file",
-        "z": "e3eb352b.400518",
-        "name": "Delete script file",
-        "filename": "",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "delete",
-        "x": 1020,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "21fb1263.d7ac8e",
-        "type": "exec",
-        "z": "e3eb352b.400518",
-        "command": " sh ",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "",
-        "timer": "",
-        "name": "Execute the shell script",
-        "x": 690,
-        "y": 340,
-        "wires": [
-            [
-                "ed708f51.2f428"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "b755ccf8.05194",
-        "type": "exec",
-        "z": "e3eb352b.400518",
-        "command": "chmod +x ",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "",
-        "timer": "",
-        "name": "",
-        "x": 1040,
-        "y": 200,
-        "wires": [
-            [
-                "8aaf8c0e.a8aea"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "7ac673d9.5705ec",
-        "type": "change",
-        "z": "e3eb352b.400518",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 230,
-        "y": 200,
-        "wires": [
-            [
-                "3dd07684.2d3fba"
-            ]
-        ]
-    },
-    {
-        "id": "d5763831.f64d58",
-        "type": "change",
-        "z": "e3eb352b.400518",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filename",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 860,
-        "y": 200,
-        "wires": [
-            [
-                "b755ccf8.05194"
-            ]
-        ]
-    },
-    {
-        "id": "58c05def.87c374",
-        "type": "function",
-        "z": "e3eb352b.400518",
-        "name": "",
-        "func": "msg.filename = msg.payload.trim();\nmsg.payload = msg.command;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 590,
-        "y": 180,
-        "wires": [
-            [
-                "bb320048.8f241",
-                "d5763831.f64d58"
-            ]
-        ]
-    },
-    {
-        "id": "8aaf8c0e.a8aea",
-        "type": "change",
-        "z": "e3eb352b.400518",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filename",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 480,
-        "y": 340,
-        "wires": [
-            [
-                "21fb1263.d7ac8e"
-            ]
-        ]
-    },
-    {
-        "id": "a79e5aec.3c25d8",
+        "id": "97244d9d.2e163",
         "type": "comment",
-        "z": "e3eb352b.400518",
-        "name": "Execute shell script",
-        "info": "Execute the shell script in msg.payload.",
-        "x": 130,
-        "y": 40,
+        "z": "c77ab3af.0f028",
+        "name": "InfluxDB READ query inside the node: Option 1",
+        "info": "",
+        "x": 280,
+        "y": 80,
         "wires": []
     },
     {
-        "id": "c0c82145.06b7f",
-        "type": "function",
-        "z": "dd125598.56b008",
-        "name": "Log to Balena",
-        "func": "console.log(msg.payload)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 600,
-        "y": 840,
+        "id": "693aa122.50776",
+        "type": "comment",
+        "z": "c77ab3af.0f028",
+        "name": "InfluxDB READ query created externally: Option 2",
+        "info": "",
+        "x": 260,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "cf88dbfd.86cff8",
+        "type": "inject",
+        "z": "c77ab3af.0f028",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 580,
+        "y": 340,
         "wires": [
             [
-                "de1c6952.5b59a8"
+                "30c946d1.d59d7a"
+            ]
+        ]
+    },
+    {
+        "id": "851140d7.d440f",
+        "type": "comment",
+        "z": "c77ab3af.0f028",
+        "name": "InfluxDB WRITE query",
+        "info": "",
+        "x": 360,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "30c946d1.d59d7a",
+        "type": "function",
+        "z": "c77ab3af.0f028",
+        "name": "WRITE data point",
+        "func": "msg.payload = {location:\"HOME\", room: \"KITCHEN\",instant: 33,average: 32.99 }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 790,
+        "y": 340,
+        "wires": [
+            [
+                "78cf4bc3.7bbfc4"
+            ]
+        ]
+    },
+    {
+        "id": "78cf4bc3.7bbfc4",
+        "type": "influxdb out",
+        "z": "c77ab3af.0f028",
+        "influxdb": "ccc0b64f.610828",
+        "name": "",
+        "measurement": "temperatures",
+        "precision": "",
+        "retentionPolicy": "",
+        "x": 1090,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ff172d39.a7cca",
+        "type": "comment",
+        "z": "f8d118e1.ddd038",
+        "name": "Data storage in JsonDB ",
+        "info": "",
+        "x": 400,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "53f449eb.786eb8",
+        "type": "comment",
+        "z": "f8d118e1.ddd038",
+        "name": "InfluxDB: Store raw data",
+        "info": "",
+        "x": 230,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7e9cb44b.d40adc",
+        "type": "function",
+        "z": "f8d118e1.ddd038",
+        "name": "INSERT data point",
+        "func": "msg.payload = {location:\"HANGAR\", room: \"Warehouse\", temperature: msg.payload }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 910,
+        "y": 240,
+        "wires": [
+            [
+                "49423bdc.9322e4",
+                "b7e150ab.b8806"
+            ]
+        ]
+    },
+    {
+        "id": "dd4dd871.0552a8",
+        "type": "debug",
+        "z": "f00a487a.95faf8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 900,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b7e150ab.b8806",
+        "type": "influxdb out",
+        "z": "f8d118e1.ddd038",
+        "influxdb": "e221cd11.84b39",
+        "name": "",
+        "measurement": "sense_hat",
+        "precision": "",
+        "retentionPolicy": "",
+        "x": 1220,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2feec98f.3ab246",
+        "type": "influxdb out",
+        "z": "f8d118e1.ddd038",
+        "influxdb": "e221cd11.84b39",
+        "name": "",
+        "measurement": "sense_hat_avg",
+        "precision": "",
+        "retentionPolicy": "",
+        "x": 1210,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "2a9062d2.7107de",
+        "type": "function",
+        "z": "f8d118e1.ddd038",
+        "name": "INSERT data point",
+        "func": "msg.payload = {location:\"HANGAR\", room: \"Warehouse\", temperature: msg.payload }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 910,
+        "y": 460,
+        "wires": [
+            [
+                "59744186.0e569",
+                "2feec98f.3ab246"
+            ]
+        ]
+    },
+    {
+        "id": "59744186.0e569",
+        "type": "debug",
+        "z": "f8d118e1.ddd038",
+        "name": "Averaged data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1140,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "75dee813.4e1318",
+        "type": "link out",
+        "z": "f00a487a.95faf8",
+        "name": "Store average temperature",
+        "links": [
+            "a10d3ee8.de1d1"
+        ],
+        "x": 1155,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "9cf08084.18e73",
+        "type": "throttle",
+        "z": "f8d118e1.ddd038",
+        "name": "",
+        "throttleType": "time",
+        "timeLimit": "10",
+        "timeLimitType": "seconds",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 710,
+        "y": 460,
+        "wires": [
+            [
+                "2a9062d2.7107de"
+            ]
+        ]
+    },
+    {
+        "id": "8c777fd6.34859",
+        "type": "comment",
+        "z": "f8d118e1.ddd038",
+        "name": "InfluxDB: Store averaged data",
+        "info": "",
+        "x": 220,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "a10d3ee8.de1d1",
+        "type": "link in",
+        "z": "f8d118e1.ddd038",
+        "name": "IN- Store temperature",
+        "links": [
+            "75dee813.4e1318"
+        ],
+        "x": 515,
+        "y": 460,
+        "wires": [
+            [
+                "9cf08084.18e73"
+            ]
+        ]
+    },
+    {
+        "id": "c1fe750c.3590b8",
+        "type": "debug",
+        "z": "c77ab3af.0f028",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1450,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6bf41c86.2fc614",
+        "type": "inject",
+        "z": "c77ab3af.0f028",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 580,
+        "y": 240,
+        "wires": [
+            [
+                "194c38c3.afe707"
+            ]
+        ]
+    },
+    {
+        "id": "194c38c3.afe707",
+        "type": "debug",
+        "z": "c77ab3af.0f028",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 870,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2e9ee36a.faaa9c",
+        "type": "function",
+        "z": "c77ab3af.0f028",
+        "name": "Last point",
+        "func": "const arr = msg.payload;\nmsg.payload = arr.slice(-1)[0]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1320,
+        "y": 160,
+        "wires": [
+            [
+                "f44bb649.e95758"
+            ]
+        ]
+    },
+    {
+        "id": "106a41a9.51f01e",
+        "type": "influxdb in",
+        "z": "c77ab3af.0f028",
+        "influxdb": "ccc0b64f.610828",
+        "name": "'sense_hat' SELECT query I",
+        "query": "SELECT * FROM sense_hat",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "x": 800,
+        "y": 120,
+        "wires": [
+            [
+                "eb1edf63.af0d"
             ]
         ]
     }
