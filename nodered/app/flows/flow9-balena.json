@@ -1202,5 +1202,84 @@
                 "590f4d8d.42b614"
             ]
         ]
+    },
+    {
+        "id": "3cee150a.0a9efa",
+        "type": "inject",
+        "z": "90eefcf2.2bcef",
+        "name": "corner colors",
+        "topic": "",
+        "payload": "0,0,red,0,7,#00ff00,7,7,yellow,7,0,0,0,255",
+        "payloadType": "str",
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1.1",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "27355eb6.73ed52"
+            ]
+        ]
+    },
+    {
+        "id": "27355eb6.73ed52",
+        "type": "rpi-sensehat out",
+        "z": "90eefcf2.2bcef",
+        "name": "",
+        "x": 730,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "23176c72.753ce4",
+        "type": "inject",
+        "z": "90eefcf2.2bcef",
+        "name": "purple column",
+        "topic": "",
+        "payload": "4-6,*,purple",
+        "payloadType": "str",
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2.1",
+        "x": 460,
+        "y": 120,
+        "wires": [
+            [
+                "27355eb6.73ed52"
+            ]
+        ]
+    },
+    {
+        "id": "adc21154.1281",
+        "type": "inject",
+        "z": "90eefcf2.2bcef",
+        "name": "",
+        "topic": "",
+        "payload": "*,*,white",
+        "payloadType": "str",
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "x": 320,
+        "y": 40,
+        "wires": [
+            [
+                "27355eb6.73ed52"
+            ]
+        ]
+    },
+    {
+        "id": "5f05d63a.f898b8",
+        "type": "comment",
+        "z": "90eefcf2.2bcef",
+        "name": "LED matrix",
+        "info": "",
+        "x": 180,
+        "y": 100,
+        "wires": []
     }
 ]
